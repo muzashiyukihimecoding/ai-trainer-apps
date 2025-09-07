@@ -71,7 +71,7 @@ body {
    transform: scaleX(0.5);
 }
 
-/* 3. Navbar Right Menu */
+/* 3. Navbar Right Menu - Extra*/
 .navbar .navbar-extra a {
    color: #fff;
    margin: 0 0.5rem;
@@ -82,6 +82,72 @@ body {
    color: var(--primary);
 }
 
+/* 4. Navbar Buttons - Login or Sign Up */
 #hamburger-menu {
    display: none;
+}
+
+.account-btn {
+   background-color: var(--bg);
+   color: #fff;
+   align-items: center;
+   text-align: center;
+   /* padding: 1.5rem; */
+}
+
+/* Media Queries Screen Responsive */
+/* 1. Laptop */
+@media (max-width: 1366px) {
+   html {
+      font-size: 75%;
+   }
+}
+
+/* 2. Tablet */
+@media (max-width: 768px) {
+   html {
+      font-size: 62.5%;
+   }
+
+   #hamburger-menu {
+      display: inline-block;
+   }
+
+   .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #fff;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.3s;
+   }
+
+   .navbar .navbar-nav.active {
+      right: 0;
+   }
+
+   .navbar .navbar-nav a {
+      color: var(--bg);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+      /* transition: 0.1s linear; */
+   }
+
+   .navbar .navbar-nav a::after {
+      transform-origin: 0 0;
+   }
+
+   .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+   }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+   html {
+      font-size: 55%;
+   }
 }
